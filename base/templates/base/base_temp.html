@@ -1,0 +1,46 @@
+{% load static %}
+<html lang="en">
+    <head>
+        <title>Theo Sayad</title>
+        <!-- connects to css font-awesome icon database -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+        <!-- connects html file to bootstrap css file -->
+        <link href="{% static 'css/bootstrap1.css' %}" rel="stylesheet">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="{% url 'home' %}">
+                <i class="fa-solid fa-vihara fa-lg me-1 ms-2"></i> Theo's Website
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav me-auto">
+                  <li class="nav-item">
+                    <a class="nav-link me-1" href="{% url 'about' %}">About</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Links</a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="https://instagram.com/theosayad/">Instagram</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="https://www.linkedin.com/in/theo-sayad-3b6349227/">LinkedIn</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="https://t.me/bscwlf">Telegram</a>
+                    </div>
+                  </li>
+                </ul>
+                <!-- <form class="d-flex">
+                  <input class="form-control me-sm-2" type="text" placeholder="Search">
+                  <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                </form> -->
+              </div>
+            </div>
+          </nav>
+        <div class="container-fluid">
+            {% block body %}
+            {% endblock body %}
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+</html>
